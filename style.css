@@ -18,23 +18,41 @@ body {
 }
 
 main {
-  background: url(images/background.svg);
-  width: 375px;
+  /*background: url(images/background.svg) no-repeat center/cover;*/
+  background-color: #111111;
+  width: 100%;
   min-height: 812px;
+  height: 100%;
+  position: relative;
+}
+
+.box {
+  background: url(images/background.svg);
+  border-radius: 20px;
+  height: 812px;
+  width: 375px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .container {
   max-width: 250px;
-  margin-left: auto;
-  margin-right: auto;
   text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
   color: var(--gray);
 }
 
 .avatar {
-  width: 10rem;
-  margin: 11.5rem auto 0;
+  /*width: 10rem;
+  margin: 11.5rem auto 0;*/
+  margin: auto;
   position: relative;
 }
 
@@ -98,5 +116,14 @@ ul {
 
 ul img:hover {
   transform: scale(1.1);
-  box-shadow: 0px 0px 5px 0.5px var(--gray);
+  box-shadow: 0px 0px 5px 0.5px #4bff1e;
+}
+
+@media screen and (max-width: 380px) {
+  .box {
+    background: url(images/background.svg) center/cover;
+    height: 100vh;
+    width: 100vw;
+    border-radius: 0;
+  }
 }
